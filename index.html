@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Metatags para evitar cache -->
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <!-- Meta Descrição -->
+    <meta name="description" content="Página para realização de sorteios da CICI Tupperware.">
+    <!-- Meta Autor -->
+    <meta name="author" content="Daniel Vicalvi">
+    <title>CICI Tupperware</title>
+    <link rel="stylesheet" href="style.css?v=1.1">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="img/CICI.png" alt="Logo VRDrive">
+        </div>
+        <h1>CICI Tupperware</h1>
+        <label for="fileInput">Carregar Nomes</label>
+        <input type="file" id="fileInput" onchange="loadNames()">
+        <select id="winnerCount">
+            <option value="1">1 Ganhador</option>
+            <option value="2">2 Ganhadores</option>
+            <option value="3">3 Ganhadores</option>
+            <option value="4">4 Ganhadores</option>
+            <option value="5">5 Ganhadores</option>
+        </select>
+        <input type="range" id="speedControl" min="50" max="300" step="10" value="100">
+        <button id="startButton" onclick="startDraw()">Iniciar Sorteio</button>
+        <div id="nameDisplay">Carregue os Nomes para começar o Sorteio.</div>
+        <div id="namePreview"></div>
+        <div class="progress-bar">
+            <div id="progress" class="progress"></div>
+        </div>
+    </div>
+    <audio id="drawSound" src="mp3/Roleta.mp3"></audio>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="script.js?v=1.1"></script>
+</body>
+
+</html>

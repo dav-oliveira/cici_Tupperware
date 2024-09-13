@@ -1,0 +1,175 @@
+  /* Reset básico */
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #2a4577 0%, #437cdf 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #fff;
+      text-align: center;
+  }
+
+  .container {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+      max-width: 500px;
+      width: 100%;
+  }
+
+  .logo {
+      margin-bottom: 20px;
+  }
+
+  .logo img {
+      width: 150px;
+      height: auto;
+  }
+
+  h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      animation: glow 1.5s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+      from {
+          text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff;
+      }
+
+      to {
+          text-shadow: 0 0 20px #fff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff, 0 0 80px #ff00ff;
+      }
+  }
+
+  input[type="file"] {
+      display: none;
+  }
+
+  label {
+      background-color: #ff00ff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  }
+
+  label:hover {
+      background-color: #e600e6;
+  }
+
+  #startButton {
+      background-color: #eb53d1;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  }
+
+  #startButton:hover {
+      background-color: #00e600;
+  }
+
+  #winnerCount {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #ff00ff;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  }
+
+  #winnerCount:hover {
+      background-color: #e600e6;
+  }
+
+  #nameDisplay {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+      min-height: 50px;
+  }
+
+  /* Estilo da barra de progresso */
+  .progress-bar {
+      width: 100%;
+      background-color: #e0e0e0;
+      margin-top: 20px;
+      border-radius: 5px;
+      overflow: hidden;
+  }
+
+  .progress {
+      height: 10px;
+      background-color: #00ff00;
+      width: 0;
+      transition: width 0.4s ease;
+  }
+
+  /* CSS Atualizado */
+  #winnerDisplay {
+      font-size: 2rem;
+      color: #00ff00;
+      background-color: rgba(0, 255, 0, 0.1);
+      padding: 10px;
+      border-radius: 5px;
+      text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+
+  /* Lista de prévia dos nomes */
+  #namePreview {
+      margin-top: 10px;
+      max-height: 150px;
+      overflow-y: auto;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+  }
+
+  /* Ajuste adicional para dispositivos móveis */
+  @media (max-width: 600px) {
+      .winner {
+          font-size: 1.2rem;
+          /* Reduz o tamanho da fonte para telas pequenas */
+          padding: 5px;
+          /* Ajuste o padding para manter a legibilidade */
+          white-space: nowrap;
+          /* Garante que o nome e CPF fiquem na mesma linha */
+      }
+
+      #nameDisplay {
+          font-size: 1rem;
+          /* Ajuste adicional para exibição do texto no celular */
+          padding: 8px;
+          /* Mantém o layout consistente */
+      }
+
+      #winnerDisplay {
+          font-size: 1.2rem;
+          padding: 5px;
+          white-space: nowrap;
+      }
+  }
