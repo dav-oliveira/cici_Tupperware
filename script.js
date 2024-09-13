@@ -82,7 +82,7 @@ function startDraw() {
                 winners.push(winner);
             }
         }
-        document.getElementById('nameDisplay').innerHTML = '<span id="winnerDisplay">Vencedor(es):<br>' + winners.join('<br>') + '</span>';
+        document.getElementById('nameDisplay').innerHTML = '<span id="winnerDisplay">Parabéns:<br>' + winners.join('<br>') + '</span>';
         resetProgressBar();
     }, 13000);
 }
